@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Serif:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-base: #F5EFE6;
+  --color-brand-ink: #111111;
+  --color-brand-accent: #C86B4A;
+  --color-brand-muted: #B8B3AA;
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Noto Serif", Georgia, serif;
+}
+
+body {
+  background-color: var(--color-brand-base);
+  color: var(--color-brand-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-muted);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-ink);
+}
+
+/* Custom form checkbox override */
+[type="checkbox"]:checked {
+  background-color: var(--color-brand-ink) !important;
+  border-color: var(--color-brand-ink) !important;
+}
